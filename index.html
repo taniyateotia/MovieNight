@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Movie Night</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            🎬 Movie Night
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#movies">Movies</a>
+            <a href="#watchlist">Watchlist</a>
+
+            <button id="darkModeBtn">🌙</button>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-title">WELCOME TO</p>
+
+            <h1>Movie Night 🍿</h1>
+
+            <p>
+                Find your next favourite movie.
+                Explore popular movies, search by title,
+                filter by genre and build your watchlist.
+            </p>
+
+            <button class="hero-btn" onclick="scrollToMovies()">
+                Explore Movies 🎥
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MOVIE SECTION ================= -->
+
+    <section class="movies-section" id="movies">
+
+        <h2>Explore Movies</h2>
+
+        <p class="section-description">
+            Choose something amazing to watch tonight.
+        </p>
+
+
+        <!-- SEARCH + FILTER -->
+
+        <div class="controls">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search movie..."
+            >
+
+
+            <select id="genreFilter">
+
+                <option value="all">All Genres</option>
+
+                <option value="Action">Action</option>
+
+                <option value="Adventure">Adventure</option>
+
+                <option value="Comedy">Comedy</option>
+
+                <option value="Drama">Drama</option>
+
+                <option value="Sci-Fi">Sci-Fi</option>
+
+                <option value="Animation">Animation</option>
+
+            </select>
+
+
+            <select id="sortMovies">
+
+                <option value="default">Sort By</option>
+
+                <option value="high">Highest Rating</option>
+
+                <option value="low">Lowest Rating</option>
+
+            </select>
+
+        </div>
+
+
+        <!-- MOVIE CARDS -->
+
+        <div class="movie-container" id="movieContainer">
+
+            <!-- JavaScript will add movies here -->
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WATCHLIST ================= -->
+
+    <section class="watchlist-section" id="watchlist">
+
+        <h2>❤️ My Watchlist</h2>
+
+        <p>
+            Movies you want to watch later.
+        </p>
+
+        <div id="watchlistContainer">
+
+            <p class="empty-message">
+                Your watchlist is empty.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>🎬 Movie Night</h3>
+
+        <p>
+            Grab some popcorn. Sit back. Enjoy the movie. 🍿
+        </p>
+
+        <p class="copyright">
+            © 2026 Movie Night
+        </p>
+
+    </footer>
+
+
+    <!-- ================= MOVIE POPUP ================= -->
+
+    <div class="modal" id="movieModal">
+
+        <div class="modal-content">
+
+            <button class="close-btn" onclick="closeModal()">
+                ×
+            </button>
+
+            <img id="modalImage" src="" alt="Movie Poster">
+
+            <div class="modal-info">
+
+                <h2 id="modalTitle"></h2>
+
+                <p id="modalGenre"></p>
+
+                <p id="modalRating"></p>
+
+                <p id="modalDescription"></p>
+
+                <button
+                    class="watchlist-btn"
+                    id="modalWatchlistBtn">
+                    ❤️ Add to Watchlist
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
